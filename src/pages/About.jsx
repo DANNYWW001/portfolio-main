@@ -51,7 +51,7 @@ const About = () => {
             professionally.
           </p>
           <button className="resume-btn">DOWNLOAD RESUME ○</button>
-          <div className="social-icons">
+          <div className="social-icons first-social">
             <a href="#">
               <BiLogoLinkedin />
             </a>{" "}

@@ -53,7 +53,7 @@ const Home = () => {
           <a href="#connect" className="cta-btn">
             CONTACT ME {isSmallScreen ? <MdArrowForwardIos /> : <GoDotFill />}
           </a>
-          <div className="social-icons">
+          <div className="social-icons first-social">
             <a href="#">
               <BiLogoLinkedin />
             </a>{" "}

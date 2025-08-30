@@ -1,14 +1,31 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 
+const useMediaQuery = (query) => {
+  const [matches, setMatches] = React.useState(
+    window.matchMedia(query).matches
+  );
+  React.useEffect(() => {
+    const media = window.matchMedia(query);
+    const listener = () => setMatches(media.matches);
+    media.addEventListener("change", listener);
+    return () => media.removeEventListener("change", listener);
+  }, [query]);
+  return matches;
+};
+
 const Nav = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const isSmallScreen = useMediaQuery("(max-width: 639px)");
+  const logoText = isSmallScreen
+    ? "ABIOLA. O. O"
+    : "ABIOLA OLAMILEKAN OPEYEMI";
 
   return (
     <nav className="nav">
       <div className="nav-container">
         <Link to="/" className="logo">
-          ABIOLA OLAMILEKAN OPEYEMI
+          {logoText}
         </Link>
         <div className="menu-icon" onClick={() => setIsOpen(!isOpen)}>
           <span>☰</span>

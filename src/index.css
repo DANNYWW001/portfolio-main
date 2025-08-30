@@ -36,6 +36,9 @@ button, a.cta-btn, .resume-btn, .submit-btn {
   font-weight: 600;
   cursor: pointer;
   transition: background 0.3s, transform 0.1s;
+  display: flex;
+  align-items: center;
+  gap: 4px; /* For icon spacing */
 }
 
 button:hover, a.cta-btn:hover, .resume-btn:hover, .submit-btn:hover {
@@ -131,12 +134,19 @@ p {
 .social-icons {
   display: flex;
   gap: 16px;
-  font-size: 24px;
   margin: 16px 0;
 }
 
 .social-icons a {
   color: var(--lime);
+  font-size: 24px; /* Base size */
+  box-shadow: 0 0 10px var(--lime); /* Added shadow */
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px; /* For circular feel */
+  height: 40px;
 }
 
 .social-icons a:hover {
@@ -276,7 +286,31 @@ p {
   font-weight: 600;
 }
 
-/* Tablet */
+.scroll-top {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: var(--lime);
+  color: var(--black);
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: opacity 0.3s;
+  opacity: 0.8;
+}
+
+.scroll-top:hover {
+  opacity: 1;
+}
+
+.scroll-top:active {
+  transform: scale(0.98);
+}
+
 @media (min-width: 640px) {
   .menu-icon {
     display: none;
@@ -320,9 +354,16 @@ p {
   h2 {
     font-size: 32px;
   }
+  .social-icons a {
+    font-size: 32px; /* Larger on large screens */
+    width: 48px;
+    height: 48px;
+  }
+  .scroll-top {
+    display: none; /* Hide on large screens */
+  }
 }
 
-/* Desktop */
 @media (min-width: 1024px) {
   h1 {
     font-size: 64px;

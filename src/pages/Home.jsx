@@ -1,14 +1,46 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import Projects from "../components/Projects";
 import ContactForm from "../components/ContactForm";
-import { BsArrowUpRightCircleFill } from "react-icons/bs";
 import { BiLogoLinkedin } from "react-icons/bi";
 import { FaInstagram } from "react-icons/fa";
 import { BsTwitterX } from "react-icons/bs";
 import { FaGithub } from "react-icons/fa";
+import { GoDotFill } from "react-icons/go";
+import { MdArrowForwardIos } from "react-icons/md"; // For small screen arrow
+import { FaArrowUp } from "react-icons/fa"; // For scroll to top
+
+const useMediaQuery = (query) => {
+  const [matches, setMatches] = useState(window.matchMedia(query).matches);
+  useEffect(() => {
+    const media = window.matchMedia(query);
+    const listener = () => setMatches(media.matches);
+    media.addEventListener("change", listener);
+    return () => media.removeEventListener("change", listener);
+  }, [query]);
+  return matches;
+};
 
 const Home = () => {
+  const isSmallScreen = useMediaQuery("(max-width: 639px)");
+  const [showScrollTop, setShowScrollTop] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setShowScrollTop(window.scrollY > 100 && window.innerWidth < 640);
+    };
+    window.addEventListener("scroll", handleScroll);
+    window.addEventListener("resize", handleScroll);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+      window.removeEventListener("resize", handleScroll);
+    };
+  }, []);
+
+  const scrollToTop = () => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  };
+
   return (
     <main className="main">
       <section className="hero">
@@ -19,7 +51,7 @@ const Home = () => {
             and user-friendly websites.”
           </p>
           <a href="#connect" className="cta-btn">
-            CONTACT ME <BsArrowUpRightCircleFill />
+            CONTACT ME {isSmallScreen ? <MdArrowForwardIos /> : <GoDotFill />}
           </a>
           <div className="social-icons">
             <a href="#">
@@ -91,6 +123,11 @@ const Home = () => {
         <ContactForm />
         <p className="copyright">© 2025 ABIOLA OLAMILEKAN</p>
       </section>
+      {showScrollTop && (
+        <button onClick={scrollToTop} className="scroll-top">
+          <FaArrowUp />
+        </button>
+      )}
     </main>
   );
 };

@@ -7,7 +7,7 @@
   --red: #ef4444;
   --green: #22c55e;
   --shadow-gray: #333333; /* Gray close to black for shadow */
-  --font-family: 'Poppins', sans-serif;
+  --font-family: "Poppins", sans-serif;
 }
 
 body {
@@ -28,11 +28,14 @@ a:hover {
   text-decoration: underline;
 }
 
-button, a.cta-btn, .resume-btn, .submit-btn {
+button,
+a.cta-btn,
+.resume-btn,
+.submit-btn {
   background: var(--lime);
   color: var(--black);
   border: none;
-  padding: 10px 20px; /* Reduced size */
+  padding: 15px 25px; /* Reduced size */
   border-radius: 50px;
   font-weight: 600;
   cursor: pointer;
@@ -40,13 +43,21 @@ button, a.cta-btn, .resume-btn, .submit-btn {
   display: flex;
   align-items: center;
   gap: 4px; /* For icon spacing */
+  width: fit-content;
+  font-size: 20px;
 }
 
-button:hover, a.cta-btn:hover, .resume-btn:hover, .submit-btn:hover {
+button:hover,
+a.cta-btn:hover,
+.resume-btn:hover,
+.submit-btn:hover {
   background: #b3de00;
 }
 
-button:active, a.cta-btn:active, .resume-btn:active, .submit-btn:active {
+button:active,
+a.cta-btn:active,
+.resume-btn:active,
+.submit-btn:active {
   transform: scale(0.98);
 }
 
@@ -73,9 +84,11 @@ button:active, a.cta-btn:active, .resume-btn:active, .submit-btn:active {
 }
 
 .menu-icon {
-  font-size: 24px;
+  font-size: 20px;
   cursor: pointer;
   display: block;
+  color: var(--white); /* ensure visible */
+  margin-right: 50px;
 }
 
 .nav-links {
@@ -100,7 +113,8 @@ button:active, a.cta-btn:active, .resume-btn:active, .submit-btn:active {
   padding-top: 80px;
 }
 
-h1, h2 {
+h1,
+h2 {
   font-weight: 700;
   text-transform: uppercase;
 }
@@ -157,13 +171,21 @@ p {
   color: #b3de00;
 }
 
-.hero, .short-about, .about, .connect, .projects, .capabilities, .experience {
+.hero,
+.short-about,
+.about,
+.connect,
+.projects,
+.capabilities,
+.experience {
   padding: 32px;
   max-width: 1200px;
   margin: 0 auto;
 }
 
-.hero-image, .short-about-image, .about-image {
+.hero-image,
+.short-about-image,
+.about-image {
   width: 100%;
   border-radius: 20px;
   margin-top: 32px;
@@ -297,15 +319,15 @@ p {
   background: var(--lime);
   color: var(--black);
   border-radius: 50%; /* Perfectly rounded */
-  width: 40px;
-  height: 40px;
+  width: 44px;
+  height: 44px;
   display: flex;
   align-items: center;
   justify-content: center;
   cursor: pointer;
   transition: opacity 0.3s;
   opacity: 0.8;
-  font-size: 20px; /* Arrow size */
+  font-size: 50px; /* Arrow size */
 }
 
 .scroll-top:hover {
@@ -317,6 +339,12 @@ p {
 }
 
 @media (min-width: 640px) {
+  button svg,
+  a.cta-btn svg,
+  .resume-btn svg,
+  .submit-btn svg {
+    font-size: 22px; /* slightly larger on small screens */
+  }
   .menu-icon {
     display: none;
   }
@@ -330,16 +358,24 @@ p {
   .nav-links li {
     margin: 0;
   }
-  .hero, .short-about, .about, .connect {
+  .hero,
+  .short-about,
+  .about,
+  .connect {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 32px;
     align-items: start;
   }
-  .hero-text, .short-about-text, .about-text, .connect-text {
+  .hero-text,
+  .short-about-text,
+  .about-text,
+  .connect-text {
     grid-column: 1;
   }
-  .hero-image, .short-about-image, .about-image {
+  .hero-image,
+  .short-about-image,
+  .about-image {
     grid-column: 2;
     margin-top: 0;
   }
@@ -347,7 +383,8 @@ p {
     display: flex;
     gap: 32px;
   }
-  .project-preview, .project-details {
+  .project-preview,
+  .project-details {
     flex: 1;
   }
   .project-preview {
@@ -371,7 +408,8 @@ p {
   h2 {
     font-size: 48px;
   }
-  .nav-container, section {
+  .nav-container,
+  section {
     padding: 0 64px;
   }
 }

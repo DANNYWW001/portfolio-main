@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
+import { GiHamburgerMenu } from "react-icons/gi";
+
 
 const useMediaQuery = (query) => {
   const [matches, setMatches] = React.useState(
@@ -28,7 +30,7 @@ const Nav = () => {
           {logoText}
         </Link>
         <div className="menu-icon" onClick={() => setIsOpen(!isOpen)}>
-          <span>☰</span>
+          <span><GiHamburgerMenu color="var(--white)" size="2em"/></span>
         </div>
         <ul className={`nav-links ${isOpen ? "open" : ""}`}>
           <li>

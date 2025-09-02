@@ -4,9 +4,23 @@ import { BiLogoLinkedin } from "react-icons/bi";
 import { FaInstagram } from "react-icons/fa";
 import { BsTwitterX } from "react-icons/bs";
 import { FaGithub } from "react-icons/fa";
-import { FaArrowUp } from "react-icons/fa"; // For scroll to top
+import { TbArrowBigUpFilled } from "react-icons/tb";
+import { IoMdDownload } from "react-icons/io";
+import { GoDotFill } from "react-icons/go";
+
+const useMediaQuery = (query) => {
+  const [matches, setMatches] = useState(window.matchMedia(query).matches);
+  useEffect(() => {
+    const media = window.matchMedia(query);
+    const listener = () => setMatches(media.matches);
+    media.addEventListener("change", listener);
+    return () => media.removeEventListener("change", listener);
+  }, [query]);
+  return matches;
+};
 
 const About = () => {
+  const isSmallScreen = useMediaQuery("(max-width: 639px)");
   const [showScrollTop, setShowScrollTop] = useState(false);
 
   useEffect(() => {
@@ -50,7 +64,9 @@ const About = () => {
             continually seek opportunities to grow both personally and
             professionally.
           </p>
-          <button className="resume-btn">DOWNLOAD RESUME ○</button>
+          <button className="resume-btn">
+            DOWNLOAD RESUME {isSmallScreen ? <IoMdDownload  size="1.5em"/> : <GoDotFill />}{" "}
+          </button>
           <div className="social-icons first-social">
             <a href="#">
               <BiLogoLinkedin />
@@ -151,7 +167,7 @@ const About = () => {
       </section>
       {showScrollTop && (
         <button onClick={scrollToTop} className="scroll-top">
-          <FaArrowUp />
+          <TbArrowBigUpFilled color="var(--black)"/>
         </button>
       )}
     </main>

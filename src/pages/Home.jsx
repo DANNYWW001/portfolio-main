@@ -7,8 +7,10 @@ import { FaInstagram } from "react-icons/fa";
 import { BsTwitterX } from "react-icons/bs";
 import { FaGithub } from "react-icons/fa";
 import { GoDotFill } from "react-icons/go";
-import { MdArrowForwardIos } from "react-icons/md"; // For small screen arrow
-import { FaArrowUp } from "react-icons/fa"; // For scroll to top
+import { BiSolidRightTopArrowCircle } from "react-icons/bi";
+import { FaArrowCircleUp } from "react-icons/fa";
+
+
 
 const useMediaQuery = (query) => {
   const [matches, setMatches] = useState(window.matchMedia(query).matches);
@@ -51,7 +53,12 @@ const Home = () => {
             and user-friendly websites.”
           </p>
           <a href="#connect" className="cta-btn">
-            CONTACT ME {isSmallScreen ? <MdArrowForwardIos /> : <GoDotFill />}
+            CONTACT ME{" "}
+            {isSmallScreen ? (
+              <BiSolidRightTopArrowCircle size="1.5em" />
+            ) : (
+              <GoDotFill />
+            )}
           </a>
           <div className="social-icons first-social">
             <a href="#">
@@ -125,7 +132,9 @@ const Home = () => {
       </section>
       {showScrollTop && (
         <button onClick={scrollToTop} className="scroll-top">
-          <FaArrowUp />
+          <p>
+            <FaArrowCircleUp />
+          </p>
         </button>
       )}
     </main>

@@ -99,10 +99,10 @@ a.cta-btn:active,
   display: block;
   position: absolute;
   top: 60px;
-  left: 0;
-  width: 100%;
+  left: 200px;
+  width: 50%;
   background: var(--black);
-  padding: 16px 32px;
+  padding: 16px 20px;
 }
 
 .nav-links li {
@@ -327,7 +327,6 @@ p {
   cursor: pointer;
   transition: opacity 0.3s;
   opacity: 0.8;
-  font-size: 50px; /* Arrow size */
 }
 
 .scroll-top:hover {
@@ -337,6 +336,7 @@ p {
 .scroll-top:active {
   transform: scale(0.98);
 }
+
 
 @media (min-width: 640px) {
   button svg,

@@ -9,8 +9,8 @@ import { FaGithub } from "react-icons/fa";
 import { GoDotFill } from "react-icons/go";
 import { BiSolidRightTopArrowCircle } from "react-icons/bi";
 import { FaArrowCircleUp } from "react-icons/fa";
-
-
+import profileImg from "../assets/portfolioimage1.jpg";
+import profileImgI from "../assets/portfolioimage2.jpg"
 
 const useMediaQuery = (query) => {
   const [matches, setMatches] = useState(window.matchMedia(query).matches);
@@ -75,11 +75,7 @@ const Home = () => {
             </a>
           </div>
         </div>
-        <img
-          src="https://via.placeholder.com/400?text=Profile"
-          alt="Profile"
-          className="hero-image"
-        />
+        <img src={profileImg} alt="Profile" className="hero-image" />
       </section>
       <Projects /> {/* Now using the modular Projects component */}
       <section className="short-about">
@@ -96,16 +92,12 @@ const Home = () => {
             MORE ABOUT ME
           </Link>
         </div>
-        <img
-          src="https://via.placeholder.com/400?text=Profile"
-          alt="Profile"
-          className="short-about-image"
-        />
+        <img src={profileImgI} alt="Profile" className="short-about-image" />
       </section>
       <section id="connect" className="connect">
         <div className="connect-text">
           <h2>LET'S CONNECT</h2>
-          <p>Say hello at robertgarcia@gmail.com</p>
+          <p>Say hello at olamilekanab005@gmail.com</p>
           <p>
             For more info, here's my{" "}
             <a href="#" className="resume-link">
@@ -133,7 +125,7 @@ const Home = () => {
       {showScrollTop && (
         <button onClick={scrollToTop} className="scroll-top">
           <p>
-            <FaArrowCircleUp />
+            <FaArrowCircleUp color="black" size="3em" />
           </p>
         </button>
       )}

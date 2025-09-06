@@ -4,9 +4,10 @@ import { BiLogoLinkedin } from "react-icons/bi";
 import { FaInstagram } from "react-icons/fa";
 import { BsTwitterX } from "react-icons/bs";
 import { FaGithub } from "react-icons/fa";
-import { TbArrowBigUpFilled } from "react-icons/tb";
+import { FaArrowCircleUp } from "react-icons/fa";
 import { IoMdDownload } from "react-icons/io";
 import { GoDotFill } from "react-icons/go";
+import profileImg from "../assets/portfolioimage1.jpg";
 
 const useMediaQuery = (query) => {
   const [matches, setMatches] = useState(window.matchMedia(query).matches);
@@ -65,7 +66,8 @@ const About = () => {
             professionally.
           </p>
           <button className="resume-btn">
-            DOWNLOAD RESUME {isSmallScreen ? <IoMdDownload  size="1.5em"/> : <GoDotFill />}{" "}
+            DOWNLOAD RESUME{" "}
+            {isSmallScreen ? <IoMdDownload size="1.5em" /> : <GoDotFill />}{" "}
           </button>
           <div className="social-icons first-social">
             <a href="#">
@@ -82,11 +84,7 @@ const About = () => {
             </a>
           </div>
         </div>
-        <img
-          src="https://via.placeholder.com/600x800?text=Profile"
-          alt="Profile"
-          className="about-image"
-        />
+        <img src={profileImg} alt="Profile" className="about-image" />
       </section>
       <section className="capabilities">
         <h2>MY CAPABILITIES</h2>
@@ -108,32 +106,65 @@ const About = () => {
       <section className="experience">
         <h2>MY EXPERIENCE</h2>
         <div className="exp-item">
-          <h3>Freelance Developer</h3>
-          <p>Nov 2023 - Present</p>
+          <h3>CBT Center Support Staff</h3>
+          <p>18IT (lasu cbt 18)</p>
+          <p>2021 - Nov 2023</p>
           <p>
-            Ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute
-            irure dolor in reprehenderit in voluptate velit esse cillum dolore
-            eu fugiat nulla pariatur.
+            During my time as a CBT Center Support Staff, I gained valuable
+            experience working in a collaborative environment with colleagues
+            and students. The role strengthened my teamwork, communication, and
+            problem-solving skills, while helping me adapt quickly to dynamic
+            challenges.
           </p>
         </div>
         <div className="exp-item">
-          <h3>Front-End Developer</h3>
-          <p>Sep 2023 - Nov 2024</p>
-          <p>18IT</p>
+          <h3>Freelance Developer</h3>
+          <p>Nov 2023 - Present</p>
           <p>
-            Ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute
-            irure dolor in reprehenderit in voluptate velit esse cillum dolore
-            eu fugiat nulla pariatur.
+            After concluding my time with 18 IT, I decided to pursue a career as
+            a Full-Stack Developer. During this period, I focused on building a
+            solid foundation in web technologies, starting with HTML, CSS,
+            Tailwind CSS, and JavaScript. I advanced into learning React and its
+            core functional components, applying these skills in small projects
+            to strengthen my problem-solving and UI development abilities. This
+            phase marked the beginning of my journey in creating accessible,
+            responsive, and user-friendly web applications.
+          </p>
+        </div>
+        <div className="exp-item">
+          <h3>Front-End Developer (Freelance)</h3>
+          <p>Dec 2023 - Feb 2025</p>
+          <p></p>
+          <p>
+            As a Frontend Developer, I strengthened my skills by working on
+            multiple projects using React, its components, and libraries. I
+            gained hands-on experience with API integration, animations, and
+            styling tools like Tailwind CSS, while also learning deployment and
+            hosting through GitHub and Vercel. Beyond coding, I grew my ability
+            to collaborate in teams, navigate Figma designs, and translate ideas
+            into responsive, user-friendly applications.
           </p>
         </div>
         <div className="exp-item">
           <h3>Full-stack intern</h3>
-          <p>Dec 2024 - Present</p>
+          <p>Feb 2025 - Present</p>
           <p>Tech Studio</p>
           <p>
-            Ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute
-            irure dolor in reprehenderit in voluptate velit esse cillum dolore
-            eu fugiat nulla pariatur.
+            To strengthen my frontend skills and transition into backend
+            development, I joined Tech Studio as an intern. There, I worked with
+            Node.js, Express.js, and MongoDB, while also using tools like
+            Postman for API testing and Render for deployment. Alongside backend
+            tasks, I continued improving my frontend expertise, contributing to
+            projects that required collaboration and problem-solving. This
+            internship marked a significant step forward in my journey toward
+            becoming a Full-Stack Engineer, giving me practical experience in
+            building more complex systems while fueling my commitment to
+            continuous learning.
+          </p>
+          <p>
+            As time goes on, I look forward to expanding this experience section
+            by adding more projects, roles, and achievements that reflect my
+            continuous growth as a developer.
           </p>
         </div>
       </section>
@@ -167,7 +198,9 @@ const About = () => {
       </section>
       {showScrollTop && (
         <button onClick={scrollToTop} className="scroll-top">
-          <TbArrowBigUpFilled color="var(--black)"/>
+          <p>
+            <FaArrowCircleUp color="black" size="3em" />
+          </p>
         </button>
       )}
     </main>

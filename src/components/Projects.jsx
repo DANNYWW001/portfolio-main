@@ -43,9 +43,33 @@ const Projects = () => {
                   <MdArrowOutward />
                 </a>
               )}
-              {project.githubUrl && (
-                <a href={project.githubUrl}>SEE ON GITHUB <FaGithub /></a>
-              )}
+              {project.githubUrl &&
+                (Array.isArray(project.githubUrl) ? (
+                  <div className="project-links">
+                    <a
+                      href={project.githubUrl[0]}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      SEE FRONTEND ON GITHUB <FaGithub />
+                    </a>
+                    <a
+                      href={project.githubUrl[1]}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      SEE BACKEND ON GITHUB <FaGithub />
+                    </a>
+                  </div>
+                ) : (
+                  <a
+                    href={project.githubUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    SEE ON GITHUB <FaGithub />
+                  </a>
+                ))}
             </div>
           </div>
         </div>

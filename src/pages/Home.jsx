@@ -10,7 +10,7 @@ import { GoDotFill } from "react-icons/go";
 import { BiSolidRightTopArrowCircle } from "react-icons/bi";
 import { FaArrowCircleUp } from "react-icons/fa";
 import profileImg from "../assets/portfolioimage1.jpg";
-import profileImgI from "../assets/portfolioimage2.jpg"
+import profileImgI from "../assets/portfolioimage2.jpg";
 
 const useMediaQuery = (query) => {
   const [matches, setMatches] = useState(window.matchMedia(query).matches);
@@ -64,13 +64,13 @@ const Home = () => {
             <a href="#">
               <BiLogoLinkedin />
             </a>{" "}
-            <a href="#">
+            <a href="https://www.instagram.com/thehardway_ishard?igsh=c3B3ZDVsNGYyd3B1&utm_source=qr">
               <FaInstagram />
             </a>{" "}
-            <a href="#">
+            <a href="https://x.com/_dhardwayishard?s=21">
               <BsTwitterX />
             </a>{" "}
-            <a href="#">
+            <a href="https://github.com/DANNYWW001">
               <FaGithub />
             </a>
           </div>
@@ -100,7 +100,12 @@ const Home = () => {
           <p>Say hello at olamilekanab005@gmail.com</p>
           <p>
             For more info, here's my{" "}
-            <a href="#" className="resume-link">
+            <a
+              href="https://drive.google.com/file/d/1bUECyqYpjQVq35mnw6qMLDnCG-gQ9hWb/view?usp=sharing"
+              rel="noopener noreferrer"
+              target="_blank"
+              className="resume-link"
+            >
               resume
             </a>
           </p>
@@ -108,13 +113,25 @@ const Home = () => {
             <a href="#">
               <BiLogoLinkedin />
             </a>{" "}
-            <a href="#">
+            <a
+              href="https://www.instagram.com/thehardway_ishard?igsh=c3B3ZDVsNGYyd3B1&utm_source=qr"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <FaInstagram />
             </a>{" "}
-            <a href="#">
+            <a
+              href="https://x.com/_dhardwayishard?s=21"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <BsTwitterX />
             </a>{" "}
-            <a href="#">
+            <a
+              href="https://github.com/DANNYWW001"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <FaGithub />
             </a>
           </div>

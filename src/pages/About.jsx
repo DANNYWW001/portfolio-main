@@ -65,21 +65,29 @@ const About = () => {
             continually seek opportunities to grow both personally and
             professionally.
           </p>
-          <button className="resume-btn">
-            DOWNLOAD RESUME{" "}
-            {isSmallScreen ? <IoMdDownload size="1.5em" /> : <GoDotFill />}{" "}
-          </button>
+          <a
+            href="https://drive.google.com/uc?export=download&id=1bUECyqYpjQVq35mnw6qMLDnCG-gQ9hWb"
+            download
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <button className="resume-btn">
+              DOWNLOAD RESUME{" "}
+              {isSmallScreen ? <IoMdDownload size="1.5em" /> : <GoDotFill />}{" "}
+            </button>
+          </a>
+
           <div className="social-icons first-social">
             <a href="#">
               <BiLogoLinkedin />
             </a>{" "}
-            <a href="#">
+            <a href="https://www.instagram.com/thehardway_ishard?igsh=c3B3ZDVsNGYyd3B1&utm_source=qr">
               <FaInstagram />
             </a>{" "}
-            <a href="#">
+            <a href="https://x.com/_dhardwayishard?s=21">
               <BsTwitterX />
             </a>{" "}
-            <a href="#">
+            <a href="https://github.com/DANNYWW001">
               <FaGithub />
             </a>
           </div>
@@ -105,6 +113,19 @@ const About = () => {
       </section>
       <section className="experience">
         <h2>MY EXPERIENCE</h2>
+        <div className="exp-item">
+          <h3>Computer Studies & Data Processing Teacher</h3>
+          <p>ACME private school</p>
+          <p>2019 - 2022</p>
+          <p>
+            During my time as a teacher at Acme Private School, Ikorodu
+            (2019–2022), I taught Computer Studies and Data Processing. The role
+            enhanced my ability to communicate complex concepts clearly,
+            fostered my classroom management and mentoring skills, and
+            strengthened my adaptability in guiding students through
+            technology-driven learning.
+          </p>
+        </div>
         <div className="exp-item">
           <h3>CBT Center Support Staff</h3>
           <p>18IT (lasu cbt 18)</p>
@@ -174,7 +195,12 @@ const About = () => {
           <p>Say hello at olamilekanab005@gmail.com</p>
           <p>
             For more info, here's my{" "}
-            <a href="#" className="resume-link">
+            <a
+              href="https://drive.google.com/file/d/1bUECyqYpjQVq35mnw6qMLDnCG-gQ9hWb/view?usp=sharing"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="resume-link"
+            >
               resume
             </a>
           </p>
@@ -182,13 +208,25 @@ const About = () => {
             <a href="#">
               <BiLogoLinkedin />
             </a>{" "}
-            <a href="#">
+            <a
+              href="https://www.instagram.com/thehardway_ishard?igsh=c3B3ZDVsNGYyd3B1&utm_source=qr"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <FaInstagram />
             </a>{" "}
-            <a href="#">
+            <a
+              href="https://x.com/_dhardwayishard?s=21"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <BsTwitterX />
             </a>{" "}
-            <a href="#">
+            <a
+              href="https://github.com/DANNYWW001"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <FaGithub />
             </a>
           </div>
